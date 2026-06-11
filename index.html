@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Um presente especial 💚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===================== TELA 1: ABERTURA ===================== -->
+    <section id="intro" class="screen intro active">
+      <div class="topbar">
+        <button class="close-btn" aria-label="fechar">✕</button>
+        <span class="wrapped-pill">Wrapped</span>
+        <span class="spacer"></span>
+      </div>
+
+      <div class="intro-content">
+        <h1 class="intro-title">
+          <span id="intro-de">Ale</span> separou um
+          <span class="hl">presente</span> especial!
+        </h1>
+        <p id="intro-sub" class="intro-sub"></p>
+        <button id="ver-presente" class="cta-green">Ver Presente</button>
+      </div>
+
+      <div class="fake-browser">
+        <button class="fb-back">‹</button>
+        <div class="fb-url"><span class="lock">🔒</span> <span id="fb-host">presente.com.br</span></div>
+        <button class="fb-reload">⟳</button>
+        <button class="fb-more">•••</button>
+      </div>
+    </section>
+
+    <!-- ===================== TELA 2: PLAYER ===================== -->
+    <section id="player" class="screen player">
+      <div class="player-header">
+        <button id="back-to-intro" class="ph-chevron">⌄</button>
+        <span id="player-title" class="ph-title">Eu te amo mais que tudo! 🤍</span>
+        <span class="ph-more">•••</span>
+      </div>
+
+      <div class="cover-wrap">
+        <img id="cover" class="cover" alt="foto do casal" />
+        <div class="cover-dots" id="cover-dots"></div>
+      </div>
+
+      <div class="track-row">
+        <div class="track-info">
+          <div id="track-title" class="track-title">Until I Found You</div>
+          <div id="track-artist" class="track-artist">Stephen Sanchez</div>
+        </div>
+        <button id="like-btn" class="like-btn" aria-label="curtir">✓</button>
+      </div>
+
+      <div class="progress">
+        <span id="cur-time" class="time">0:00</span>
+        <div class="bar" id="bar"><div id="bar-fill" class="bar-fill"></div></div>
+        <span id="dur-time" class="time">-2:56</span>
+      </div>
+
+      <div class="controls">
+        <button class="ctrl small" aria-label="aleatório">🔀</button>
+        <button id="prev" class="ctrl" aria-label="anterior">⏮</button>
+        <button id="play" class="ctrl play" aria-label="tocar">▶</button>
+        <button id="next" class="ctrl" aria-label="próxima">⏭</button>
+        <button class="ctrl small" aria-label="repetir">🔁</button>
+      </div>
+
+      <button id="scroll-sobre" class="sobre-peek">
+        <span>Sobre o casal</span>
+        <span class="chev-up">⌃</span>
+      </button>
+    </section>
+
+    <!-- ===================== TELA 3: SOBRE O CASAL ===================== -->
+    <section id="sobre" class="screen sobre">
+      <button id="back-to-player" class="sobre-back">⌄</button>
+      <h2 id="sobre-title" class="sobre-title">Sobre o casal</h2>
+
+      <div class="couple-card">
+        <img id="couple-photo" class="couple-photo" alt="foto do casal" />
+        <div class="couple-meta">
+          <div id="couple-names" class="couple-names">Edu e Ana</div>
+          <div id="couple-since" class="couple-since">Juntos desde 2021</div>
+        </div>
+      </div>
+
+      <div class="counter-grid" id="counter-grid">
+        <div class="counter-cell"><span class="c-num" id="c-anos">0</span><span class="c-label">Anos</span></div>
+        <div class="counter-cell"><span class="c-num" id="c-meses">0</span><span class="c-label">Meses</span></div>
+        <div class="counter-cell"><span class="c-num" id="c-dias">0</span><span class="c-label">Dias</span></div>
+        <div class="counter-cell"><span class="c-num" id="c-horas">0</span><span class="c-label">Horas</span></div>
+        <div class="counter-cell"><span class="c-num" id="c-min">0</span><span class="c-label">Minutos</span></div>
+        <div class="counter-cell"><span class="c-num" id="c-seg">0</span><span class="c-label">Segundos</span></div>
+      </div>
+
+      <p id="msg-final" class="msg-final"></p>
+
+      <button id="scroll-passos" class="scroll-hint" aria-label="ver nossos passos">⌄</button>
+    </section>
+
+    <!-- ===================== TELA 4: PASSOS ===================== -->
+    <section id="passos" class="screen passos">
+      <button id="back-to-sobre" class="sobre-back">⌃</button>
+      <h2 id="passos-title" class="passos-title">Nossos passos</h2>
+      <p id="passos-sub" class="passos-sub">Toque em cada passo para reviver o momento 💕</p>
+
+      <div class="passos-lista" id="passos-lista">
+        <!-- os passos são gerados pelo app.js -->
+      </div>
+    </section>
+
+    <!-- ===================== TELA 5: CARTA ===================== -->
+    <section id="carta" class="screen carta">
+      <div class="hearts-bg" id="hearts-bg" aria-hidden="true"></div>
+
+      <button class="envelope" id="envelope" type="button" aria-label="Abrir a carta">
+        <div class="env-paper"></div>
+        <div class="env-body"></div>
+        <div class="env-pocket"></div>
+        <div class="env-flap"></div>
+        <div class="env-seal">♥</div>
+      </button>
+      <span class="env-hint" id="env-hint">Toque para abrir 💌</span>
+
+      <div class="carta-inner" id="carta-inner">
+        <h2 class="carta-title" id="carta-title">Para o amor da minha vida</h2>
+        <div class="carta-texto" id="carta-texto">
+          <!-- os parágrafos são gerados pelo app.js -->
+        </div>
+        <p class="carta-assinatura" id="carta-assinatura">Seu amor ❤️</p>
+      </div>
+    </section>
+
+  </div>
+
+  <audio id="audio" preload="metadata"></audio>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
