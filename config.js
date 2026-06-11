@@ -51,7 +51,7 @@ window.PRESENTE = {
   // Coloque as fotos em assets/passos/ e ajuste os textos.
   passos: {
     titulo: "Nossos passos",
-    subtitulo: "Toque em cada passo para reviver o momento 💕",
+    subtitulo: "Toque em cada passo para ver nossos futuros momentos 💕",
     itens: [
       { titulo: "Nosso noivado",        legenda: "...",  foto: "assets/passos/passo1.jpg" },
       { titulo: "Nosso casamento",      legenda: "...",  foto: "assets/passos/passo2.jpg" },
