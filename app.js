@@ -45,13 +45,6 @@
     }
 
     if (cfg.mensagemFinal) $("msg-final").textContent = cfg.mensagemFinal;
-
-    var host = $("fb-host");
-    if (host) {
-      var h = window.location.hostname;
-      var local = !h || h === "localhost" || h === "127.0.0.1" || h === "[::1]";
-      host.textContent = local ? (cfg.intro && cfg.intro.dominio) || "alepraale.vercel.app" : h;
-    }
   }
 
   // ----------------------------------------------------------------

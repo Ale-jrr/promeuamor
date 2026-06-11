@@ -12,7 +12,6 @@ window.PRESENTE = {
     titulo: "separou um presente especial!",
     subtitulo: "Um momento único feito com carinho\npara celebrar a jornada de vocês",
     botao: "Ver Presente",
-    dominio: "alepraale.vercel.app",   // mostrado na barra falsa quando aberto local; online usa o endereço real
   },
 
   // --- Player de música (estilo Spotify) ---

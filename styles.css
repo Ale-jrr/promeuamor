@@ -93,18 +93,6 @@ body {
 }
 .cta-green:active { transform: scale(.96); }
 
-.fake-browser {
-  display: flex; align-items: center; gap: 10px;
-  background: rgba(225,29,72,.85); border-radius: 18px; padding: 10px 14px;
-  font-size: 14px; color: #fff;
-}
-.fake-browser button { background: none; border: none; color: #fff; font-size: 16px; }
-.fb-url {
-  flex: 1; text-align: center; background: rgba(0,0,0,.18);
-  border-radius: 999px; padding: 7px 12px; font-size: 13px;
-}
-.fb-url .lock { font-size: 11px; opacity: .85; }
-
 /* =================== TELA 2: PLAYER =================== */
 .player {
   background:
