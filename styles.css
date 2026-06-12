@@ -62,16 +62,6 @@ body {
     #050505;
   justify-content: space-between;
 }
-.topbar { display: flex; align-items: center; gap: 12px; }
-.close-btn {
-  background: none; border: none; color: #fff; font-size: 20px; cursor: pointer;
-}
-.wrapped-pill {
-  background: var(--green); color: #053; font-weight: 700; font-size: 13px;
-  padding: 5px 14px; border-radius: 999px;
-}
-.spacer { flex: 1; }
-
 .intro-content {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
   align-items: center; text-align: center; gap: 18px; padding: 0 6px;
@@ -158,18 +148,13 @@ body {
 .sobre-peek {
   margin-top: auto; background: rgba(0,0,0,.35); border: none; color: #fff;
   border-radius: 14px 14px 0 0; padding: 14px; font-size: 16px; font-weight: 700;
-  display: flex; align-items: center; justify-content: space-between; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
 }
-.chev-up { font-size: 14px; opacity: .8; }
 
 /* =================== TELA 3: SOBRE =================== */
 .sobre {
   background: linear-gradient(180deg, #16181c 0%, #0a0b0d 100%);
   gap: 18px; justify-content: center;
-}
-.sobre-back {
-  background: none; border: none; color: #fff; font-size: 26px; cursor: pointer;
-  align-self: flex-start;
 }
 .sobre-title { font-size: 26px; font-weight: 800; }
 
@@ -203,13 +188,6 @@ body {
   .intro-content { gap: 22px; }
 }
 
-/* dica de rolagem no fim do "Sobre o casal" */
-.scroll-hint {
-  width: auto; align-self: center; margin-top: 6px;
-  background: none; border: none; cursor: pointer;
-  color: rgba(255,255,255,.6); font-size: 28px; line-height: 1;
-  animation: bob 1.5s ease-in-out infinite;
-}
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 
 /* =================== TELA 4: PASSOS (tocar para revelar) =================== */
@@ -219,7 +197,6 @@ body {
     linear-gradient(180deg, #160a0e 0%, #0a0708 100%);
   justify-content: flex-start; gap: 4px;
 }
-.passos .sobre-back { align-self: flex-start; }
 .passos-title { font-size: clamp(26px, 7vw, 34px); font-weight: 800; text-align: center; margin-top: 4px; }
 .passos-sub { text-align: center; color: rgba(255,255,255,.7); font-size: 14px; margin-bottom: 16px; }
 

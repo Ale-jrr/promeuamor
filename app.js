@@ -58,9 +58,6 @@
   $("ver-presente").addEventListener("click", function () { irPara("player"); tryPlay(); });
   $("back-to-intro").addEventListener("click", function () { irPara("intro"); });
   $("scroll-sobre").addEventListener("click", function () { irPara("sobre"); });
-  $("back-to-player").addEventListener("click", function () { irPara("player"); });
-  $("scroll-passos").addEventListener("click", function () { irPara("passos"); });
-  $("back-to-sobre").addEventListener("click", function () { irPara("sobre"); });
 
   // Revela o conteúdo ao entrar na tela + toca a música no player
   if ("IntersectionObserver" in window) {
@@ -122,6 +119,7 @@
   var playBtn = $("play");
   var barFill = $("bar-fill");
   var bar = $("bar");
+  var userPaused = false; // quando o usuário pausa de propósito, o autoplay não religa
 
   function fmt(sec) {
     if (isNaN(sec) || sec < 0) sec = 0;
@@ -131,6 +129,7 @@
   }
 
   function tryPlay() {
+    if (userPaused) return; // respeita a pausa manual do usuário
     audio.play().then(function () {
       playBtn.textContent = "❚❚";
     }).catch(function () {
@@ -140,8 +139,8 @@
   }
 
   playBtn.addEventListener("click", function () {
-    if (audio.paused) { audio.play(); playBtn.textContent = "❚❚"; }
-    else { audio.pause(); playBtn.textContent = "▶"; }
+    if (audio.paused) { userPaused = false; audio.play(); playBtn.textContent = "❚❚"; }
+    else { userPaused = true; audio.pause(); playBtn.textContent = "▶"; }
   });
 
   $("next").addEventListener("click", nextFoto);
